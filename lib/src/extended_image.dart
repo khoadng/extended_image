@@ -976,19 +976,6 @@ class _ExtendedImageState extends State<ExtendedImage>
       }
     }
 
-    if (widget.border != null) {
-      current = CustomPaint(
-        foregroundPainter: ExtendedImageBorderPainter(
-            borderRadius: widget.borderRadius,
-            border: widget.border,
-            shape: widget.shape ?? BoxShape.rectangle),
-        child: current,
-        size: widget.width != null && widget.height != null
-            ? Size(widget.width!, widget.height!)
-            : Size.zero,
-      );
-    }
-
     if (widget.constraints != null) {
       current =
           ConstrainedBox(constraints: widget.constraints!, child: current);
